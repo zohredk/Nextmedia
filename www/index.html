@@ -14,12 +14,31 @@
     />
   </head>
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".color-btn").click(function () {
+          $(".color-section").each(function () {
+            let currentColor = $(this).css("background-color");
+            let newColor =
+              currentColor === "rgba(0, 0, 0, 0)" ||
+              currentColor === "transparent"
+                ? "#fcffd5"
+                : "transparent";
+
+            $(this).animate({ backgroundColor: newColor }, 1000);
+          });
+        });
+      });
+    </script>
+
     <!-- header -->
     <header>
       <!-- nav -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="./index.html"
             ><img src="./Img/Logo.png" alt="Logo" height="30"
           /></a>
           <button
@@ -35,11 +54,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="#one"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -48,13 +69,15 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Nextmedia Australia</a>
+                    <a class="dropdown-item" href="#one">Nextmedia Australia</a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Nextmedia India</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Nextmedia India</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Brands</a>
+                <a class="nav-link" href="#three">Brands</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -67,8 +90,8 @@
                   Advertising
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Ad Specs</a></li>
-                  <li><a class="dropdown-item" href="#">Media Kits</a></li>
+                  <li><a class="dropdown-item" href="#two">Ad Specs</a></li>
+                  <li><a class="dropdown-item" href="#three">Media Kits</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -169,96 +192,113 @@
       </div>
 
       <!-- section one -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <h2 class="text-center my-4 bg-body-tertiary rounded-1">
-            AUSTRALIAN MUSCLE CAR ‘BATHURST’ SPECIAL OFFER
-          </h2>
-          <div class="col-5 text-center">
-            <img src="./Img/1.jpg" class="img-fluid rounded" width="400" />
-            <div class="container save rounded-circle py-1">
-              <h3>S AV E</h3>
-              <h3>OVER</h3>
-              <h3>15%</h3>
+      <section id="one" class="color-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h2 class="text-center my-4 bg-body-tertiary rounded-1">
+              AUSTRALIAN MUSCLE CAR ‘BATHURST’ SPECIAL OFFER
+            </h2>
+            <div class="col-5 text-center">
+              <img src="./Img/1.jpg" class="img-fluid rounded" width="400" />
+              <div class="container save rounded-circle py-1">
+                <h3>S AV E</h3>
+                <h3>OVER</h3>
+                <h3>15%</h3>
+              </div>
             </div>
-          </div>
-          <div class="col-5 text-center mt-2">
-            <h4>ONLY</h4>
-            <h4>$59</h4>
-            <h4 class="mb-3">12 MONTHS</h4>
-            <h4>+ FREE GIFT!</h4>
-            <div class="d-grid gap-2 my-3 mx-auto col-6">
-              <button type="button" class="btn btn-outline-danger">
-                SUBSCRIBE NOW
-              </button>
+            <div class="col-5 text-center mt-2">
+              <h4>ONLY</h4>
+              <h4>$59</h4>
+              <h4 class="mb-3">12 MONTHS</h4>
+              <h4>+ FREE GIFT!</h4>
+              <div class="d-grid gap-2 my-3 mx-auto col-6">
+                <button type="button" class="btn btn-outline-danger">
+                  SUBSCRIBE NOW
+                </button>
+                <button type="button" class="btn color-btn btn-outline-info">
+                  Don't get Bored!
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
       <!-- section two -->
-      <div class="container">
-        <div class="row bg-body-tertiary justify-content-center mt-3 rounded-1">
-          <div class="col-6 mt-3 mx-2">
-            <h3>FREE GIFT</h3>
-            <h5>BATHURST</h5>
-            <p>
-              50 years of The Great Race SPECIAL PICTORIAL EDITION 210 pages
-              covering Brock, Moffat, Lowndes, Johnson, Skaife, Perkins, Grice
-              Whincup, Murphy ­ all the Bathurst stars and cars...
-            </p>
-          </div>
-          <div class="col-5 text-center mx-2">
-            <img src="./Img/2.jpg" class="img-fluid my-4 rounded" width="400" />
+      <section id="two" class="color-section">
+        <div class="container">
+          <div
+            class="row bg-body-tertiary justify-content-center mt-3 rounded-1"
+          >
+            <div class="col-6 mt-3 mx-2">
+              <h3>FREE GIFT</h3>
+              <h5>BATHURST</h5>
+              <p>
+                50 years of The Great Race SPECIAL PICTORIAL EDITION 210 pages
+                covering Brock, Moffat, Lowndes, Johnson, Skaife, Perkins, Grice
+                Whincup, Murphy ­ all the Bathurst stars and cars...
+              </p>
+            </div>
+            <div class="col-5 text-center mx-2">
+              <img
+                src="./Img/2.jpg"
+                class="img-fluid my-4 rounded"
+                width="400"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
       <!-- section three -->
-      <div class="container">
-        <h3 class="text-center my-4 py-2 bg-body-tertiary rounded-1">
-          OTHER PRODUCTS ALSO
-        </h3>
-        <div class="row">
-          <div class="col text-center mx-auto mb-3 col-4">
-            <img
-              src="./Img/3.jpg"
-              class="img-fluid mb-4 rounded"
-              alt="Cover Image"
-            />
-            <p>$39.95</p>
-            <div class="d-grid col-6 mx-auto justify-content-center">
-              <button type="button" class="btn btn-outline-danger">
-                SUBSCRIBE NOW
-              </button>
+      <section id="three" class="color-section">
+        <div class="container">
+          <h3 class="text-center my-4 py-2 bg-body-tertiary rounded-1">
+            OTHER PRODUCTS ALSO
+          </h3>
+          <div class="row">
+            <div class="col text-center mx-auto mb-3 col-4">
+              <img
+                src="./Img/3.jpg"
+                class="img-fluid mb-4 rounded"
+                alt="Cover Image"
+              />
+              <p>$39.95</p>
+              <div class="d-grid col-6 mx-auto justify-content-center">
+                <button type="button" class="btn btn-outline-danger">
+                  SUBSCRIBE NOW
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="col text-center mx-auto mb-3 col-4">
-            <img
-              src="./Img/4.jpg"
-              class="img-fluid mb-4 rounded"
-              alt="Cover Image"
-            />
-            <p>$39.95</p>
-            <div class="d-grid col-6 mx-auto justify-content-center">
-              <button type="button" class="btn btn-outline-danger">
-                SUBSCRIBE NOW
-              </button>
+            <div class="col text-center mx-auto mb-3 col-4">
+              <img
+                src="./Img/4.jpg"
+                class="img-fluid mb-4 rounded"
+                alt="Cover Image"
+              />
+              <p>$39.95</p>
+              <div class="d-grid col-6 mx-auto justify-content-center">
+                <button type="button" class="btn btn-outline-danger">
+                  SUBSCRIBE NOW
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="col text-center mx-auto mb-3 col-4">
-            <img
-              src="./Img/5.jpg"
-              class="img-fluid mb-4 rounded"
-              alt="Cover Image"
-            />
-            <p>$39.95</p>
-            <div class="d-grid col-6 mx-auto justify-content-center">
-              <button type="button" class="btn btn-outline-danger">
-                SUBSCRIBE NOW
-              </button>
+            <div class="col text-center mx-auto mb-3 col-4">
+              <img
+                src="./Img/5.jpg"
+                class="img-fluid mb-4 rounded"
+                alt="Cover Image"
+              />
+              <p>$39.95</p>
+              <div class="d-grid col-6 mx-auto justify-content-center">
+                <button type="button" class="btn btn-outline-danger">
+                  SUBSCRIBE NOW
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     <!-- footer -->
     <footer class="container-sm">
