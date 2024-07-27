@@ -12,11 +12,14 @@ body {
 }
 
 /* carousel */
-
+.carousel-item {
+  position: relative;
+  height: 100vh; /* Adjust this value as needed for different screen sizes */
+}
 .carousel-item img {
-  object-fit: cover;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /* section one */
@@ -28,62 +31,30 @@ body {
 }
 .row .col-5 .save {
   background-color: bisque;
-  max-width: 110px;
-  max-height: 110px;
-  border-radius: 50%;
+  max-width: 120px;
   position: absolute;
   bottom: -10px;
   right: -10px;
-  width: 100%;
   border: 1px solid black;
-  height: auto;
 }
 .row .col-5 .save h3 {
   margin: 5px;
-  padding: 0px;
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 768px) {
   .carousel-item {
-    max-height: 800px;
-    max-width: 720px;
-  }
-}
-*/
-
-/* Media queries for responsiveness */
-/* @media (max-width: 576px) {
-  .row .col-5 .save {
-    max-width: 100px; 
-    max-height: 100px; 
-    bottom: -20px; 
-    right: -10px; 
+    height: 100vh;
   }
 }
 
-@media (max-width: 768px) {
-  .row .col-5 .save {
-    max-width: 110px; 
-    max-height: 110px; 
-    bottom: -20px; 
-    right: -10px; 
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 100vh;
   }
 }
 
-@media (max-width: 992px) {
-  .row .col-5 .save {
-    max-width: 120px; 
-    max-height: 120px; 
-    bottom: -20px; 
-    right: -10px; 
+@media (min-width: 1200px) {
+  .carousel-item {
+    height: 90vh;
   }
 }
-
-@media (max-width: 1200px) {
-  .row .col-5 .save {
-    max-width: 140px; 
-    max-height: 140px; 
-    bottom: -30px; 
-    right: -20px; 
-  }
-} */
