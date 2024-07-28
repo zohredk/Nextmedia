@@ -37,16 +37,43 @@ body {
 .row .col-5 .save h3 {
   margin: 5px;
 }
-
-@media (max-width: 800px) {
+footer {
+  background-color: #f8f9fa;
+}
+footer li a {
+  color: black;
+}
+footer li a:hover {
+  color: #0dcaf0;
+}
+/* Mobile devices */
+@media (max-width: 576px) {
+  /* Styles for small screens */
   .row .col-5 .save {
-    bottom: 115px;
-    right: -30px;
+    bottom: -5px;
+    right: -20px;
   }
 }
 
-@media (min-width: 992px) {
-  .carousel-item {
-    height: 90vh;
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .row .col-5 .save {
+    bottom: 15px;
+    right: -20px;
+  }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 769px) and (max-width: 992px) {
+  .row .col-5 .save {
+    bottom: -15px;
+    right: -20px;
+  }
+}
+/* Large Desktops */
+@media (min-width: 993px) {
+  .row .col-5 .save {
+    bottom: -15px;
+    right: -20px;
   }
 }
