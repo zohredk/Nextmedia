@@ -11,11 +11,8 @@ body {
   line-height: 1.6;
 }
 
-/* carousel */
-.carousel-item {
-  position: relative;
-  height: 100vh; /* Adjust this value as needed for different screen sizes */
-}
+/* carousel  */
+
 .carousel-item img {
   width: 100%;
   height: auto;
@@ -41,19 +38,14 @@ body {
   margin: 5px;
 }
 
-@media (min-width: 768px) {
-  .carousel-item {
-    height: 100vh;
+@media (max-width: 800px) {
+  .row .col-5 .save {
+    bottom: 115px;
+    right: -30px;
   }
 }
 
 @media (min-width: 992px) {
-  .carousel-item {
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1200px) {
   .carousel-item {
     height: 90vh;
   }
